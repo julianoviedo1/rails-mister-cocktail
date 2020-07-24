@@ -1,0 +1,20 @@
+<div class="navbar">
+<h2>The Cocktails Club</h2>
+<%= link_to "Add Cocktail", new_cocktail_path , class:"btn btn-primary" %>
+</div>
+<div class="container d-flex justify-content-between">
+  <div class="row row-cols-4">
+  <% @cocktails.each do |cocktail| %>
+    <div class="card m-3 p-2">
+      <div class="card-body">
+          <h5 class="card-title"><%= cocktail.name %></h5>
+          <div class="row justify-content-around">
+            <%= link_to 'More info', cocktail_path(cocktail.id), class: "btn btn-primary m-2" %>
+            <%# <%= link_to 'Update cocktail', edit_cocktail_path(cocktail.id), class: "btn btn-warning m-2" %>
+            <%# <%= link_to 'delete', cocktail_path(cocktail.id), method: :delete, class: "btn btn-danger m-2" %>
+          </div>
+      </div>
+    </div>
+    <%end%>
+  </div>
+</div>
