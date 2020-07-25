@@ -1,0 +1,37 @@
+.btn-flat {
+  color: white;
+  padding: 6px 16px;
+  border-radius: 4px;
+  background: #169e61;
+  transition: background 0.3s ease;
+  margin: 8px;
+}
+
+.btn-flat:hover {
+  background: #0b4e31;
+  color: white;
+}
+
+.btn-back {
+  color: white;
+  padding: 6px 16px;
+  border-radius: 4px;
+  background: #9e3d16;
+  transition: background 0.3s ease;
+  margin: 8px;
+}
+
+.btn-back:hover {
+  background: #4e290b;
+  color: white;
+}
+
+.trasher {
+  position: absolute;
+  right: 1%;
+  bottom: 7%  ;
+}
+
+.banner-btn {
+  bottom: 0px;
+}

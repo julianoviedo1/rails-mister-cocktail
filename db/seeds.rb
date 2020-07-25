@@ -16,10 +16,18 @@ user['drinks'].each do |drink|
   ingredient.save!
   p ingredient
 end
-cocktaila = Cocktail.new(name: 'Mint Julep')
-cocktailb = Cocktail.new(name: 'Whiskey Sour')
-cocktailc = Cocktail.new(name: 'Mojito')
-cocktaila.save!
-cocktailb.save!
-cocktailc.save!
+
+file = URI.open('https://res.cloudinary.com/julianoviedo1/image/upload/v1595618936/mintjulep_b4jbzh.png')
+a = Cocktail.new(name: 'Mint Julep')
+a.photo.attach(io: file, filename: 'mintjulep_b4jbzh.png', content_type: 'image/png')
+a.save!
+fileb = URI.open('https://res.cloudinary.com/julianoviedo1/image/upload/v1595619138/536914-PJIWWP-191_iwhn4b.jpg')
+b = Cocktail.new(name: 'Tequila')
+b.photo.attach(io: fileb, filename: '536914-PJIWWP-191_iwhn4b.jpg', content_type: 'image/jpg')
+b.save!
+filec = URI.open('https://res.cloudinary.com/julianoviedo1/image/upload/v1595618933/daiquiri.jpg')
+c = Cocktail.new(name: 'Daiquiri')
+c.photo.attach(io: filec, filename: 'daiquiri.jpg', content_type: 'image/png')
+c.save!
+
 puts 'finish seed'
